@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:weightSum="50"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:padding="15dp"
+            android:layout_weight="40"
+            android:text="Họ tên:"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></TextView>
+        <EditText
+            android:layout_weight="10"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></EditText>
+    </LinearLayout>
+    <LinearLayout
+        android:weightSum="50"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_weight="40"
+            android:text="Giới tính"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></TextView>
+        <LinearLayout
+            android:layout_weight="10"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <CheckBox
+                android:layout_weight="1"
+                android:text="Nam"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></CheckBox>
+            <CheckBox
+                android:layout_weight="1"
+                android:text="Nữ"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"></CheckBox>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:weightSum="50"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:padding="10dp"
+            android:layout_weight="40"
+            android:text="Quê quán:"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></TextView>
+        <EditText
+            android:layout_weight="10"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></EditText>
+    </LinearLayout>
+    <LinearLayout
+        android:weightSum="100"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_weight="23"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></LinearLayout>
+        <LinearLayout
+            android:layout_weight="15"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <Button
+                android:text="THÊM MỚI"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"></Button>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="23"></LinearLayout>
+
+        <LinearLayout
+            android:layout_weight="15"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"><Button
+            android:text="IN DANH SACH"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></Button>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_weight="24"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
