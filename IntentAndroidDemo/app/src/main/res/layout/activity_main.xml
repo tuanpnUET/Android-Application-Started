@@ -4,8 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".MainActivity">
-
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
     <ImageView
         android:onClick="openChrome"
         android:id="@+id/imgChorme"
@@ -19,4 +23,27 @@
         android:layout_width="70dp"
         android:layout_height="70dp"
         tools:ignore="OnClick"></ImageView>
+    <ImageView
+        android:onClick="openMessage"
+        android:id="@+id/imgCall"
+        android:src="@drawable/call"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        tools:ignore="OnClick"></ImageView>
+
+    <ImageView
+        android:id="@+id/imgCamera"
+        android:layout_width="106dp"
+        android:layout_height="72dp"
+        android:onClick="openMessage"
+        android:src="@drawable/camera"
+        tools:ignore="OnClick"></ImageView>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imgNoPreview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:src="@drawable/imgNoPreview"></ImageView>
 </LinearLayout>
