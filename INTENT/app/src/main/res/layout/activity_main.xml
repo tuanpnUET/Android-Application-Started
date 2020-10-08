@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:orientation="vertical"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context=".MainActivity">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:onClick="openChrome"
+            android:id="@+id/imgChorme"
+            android:src="@drawable/chorme"
+            android:layout_width="70dp"
+            android:layout_height="70dp"></ImageView>
+        <ImageView
+            android:onClick="openMessage"
+            android:id="@+id/imgMes"
+            android:src="@drawable/mes"
+            android:layout_width="70dp"
+            android:layout_height="70dp"></ImageView>
+        <ImageView
+            android:onClick="openCalling"
+            android:id="@+id/imgCall"
+            android:src="@drawable/dienthoai"
+            android:layout_width="70dp"
+            android:layout_height="70dp"></ImageView>
+        <ImageView
+            android:onClick="openCamera"
+            android:id="@+id/imgCamera"
+            android:src="@drawable/mayanh"
+            android:layout_width="70dp"
+            android:layout_height="70dp"></ImageView>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imgNoPreview"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center"
+        android:src="@drawable/anhloi"></ImageView>
+</LinearLayout>
