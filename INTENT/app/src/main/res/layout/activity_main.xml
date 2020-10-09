@@ -40,11 +40,23 @@ tools:context=".MainActivity">
         android:layout_height="wrap_content">
 
     </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
 
-    <ImageView
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:paddingTop="18sp"
+            android:layout_gravity="top"
+            android:id="@+id/imgGallery"
+            android:onClick="openGallery"
+            android:src="@drawable/picture" />
+        <ImageView
         android:id="@+id/imgNoPreview"
         android:layout_width="200dp"
         android:layout_height="200dp"
         android:layout_gravity="center"
         android:src="@drawable/anhloi"></ImageView>
+    </LinearLayout>
 </LinearLayout>
