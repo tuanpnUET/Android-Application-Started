@@ -49,6 +49,11 @@ public class MainActivity extends AppCompatActivity {
         intent.setData(Uri.parse("sms:0963685229"));
         startActivity(intent);
     }
+    public void openGallery(View view){
+        Intent intent = new Intent();
+        intent.setType("image/*");
+        startActivityForResult(intent, REQ_CODE_CAM);
+    }
     public void openCalling(View view){
         configUser();
     }
@@ -104,7 +109,9 @@ public class MainActivity extends AppCompatActivity {
             }
         }
     }
+    protected  void openGallery(){
 
+    }
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
