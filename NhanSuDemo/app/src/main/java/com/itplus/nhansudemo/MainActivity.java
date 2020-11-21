@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void getAllData() {
-        String url = "http://192.168.1.3/android/getAllData.php";
+        String url = "http://172.168.4.106:81/QLNS/getAllData.php";
         RequestQueue requestQueue = Volley.newRequestQueue(this);
         JsonArrayRequest arrayRequest = new JsonArrayRequest(Request.Method.GET, url, null,
                 new Response.Listener<JSONArray>() {
@@ -56,6 +56,7 @@ public class MainActivity extends AppCompatActivity {
                             try {
                                 JSONObject jsonObject = response.getJSONObject(i);
                                 nhanSuList.add(new NhanSu(jsonObject.getInt("id"), jsonObject.getString("hoten"), jsonObject.getString("ngaysinh"), jsonObject.getString("diachi")));
+                                Toast.makeText(MainActivity.this, ""+nhanSuList.toString(), Toast.LENGTH_SHORT).show();
                             } catch (JSONException e) {
                                 e.printStackTrace();
                             }
@@ -86,7 +87,7 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
     public void deleteNhanSu(final int id){
-        String url = "http://192.168.1.3/android/deletedata.php";
+        String url = "http://172.168.4.106:81/QLNS/deletedata.php";
         RequestQueue requestQueue = Volley.newRequestQueue(this);
         StringRequest stringRequest = new StringRequest(Request.Method.POST, url,
                 new Response.Listener<String>() {
