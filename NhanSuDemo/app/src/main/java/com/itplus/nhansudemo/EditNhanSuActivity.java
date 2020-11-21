@@ -44,7 +44,7 @@ public class EditNhanSuActivity extends AppCompatActivity implements View.OnClic
     public void onClick(View view){
         switch (view.getId()){
             case R.id.btnEdit:
-                updateNhanSu("http://192.168.1.3/android/updatedata.php");
+                updateNhanSu("http://172.168.4.106:81/QLNS/updatedata.php");
                 break;
             case R.id.btnCancel:
                 finish();
