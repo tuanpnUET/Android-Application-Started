@@ -49,7 +49,7 @@ public class AddNhanSuActivity extends AppCompatActivity {
             }
         }
         else{
-            insertNhanSu("http://192.168.1.3/android/insertdata.php");
+            insertNhanSu("http://172.168.4.106:81/QLNS/insertdata.php");
         }
     }
 
