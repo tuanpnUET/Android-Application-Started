@@ -1,5 +1,6 @@
 package com.itplus.qlbanhang.Activity;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
@@ -8,7 +9,12 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -26,6 +32,7 @@ import com.itplus.qlbanhang.Adapter.ProductAdapter;
 import com.itplus.qlbanhang.Model.Category;
 import com.itplus.qlbanhang.Model.Product;
 import com.itplus.qlbanhang.R;
+import com.squareup.picasso.Picasso;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -143,7 +150,9 @@ public class MainActivity extends AppCompatActivity {
         lvNavigation = findViewById(R.id.lvNavigation);
     }
     private void init(){
+
         initActionBar();
+        initViewFlipper();
     }
     private void initActionBar() {
         setSupportActionBar(toolbar);
@@ -155,5 +164,37 @@ public class MainActivity extends AppCompatActivity {
                 drawerLayout.openDrawer(GravityCompat.START);
             }
         });
+    }
+    private void initViewFlipper() {
+        List<String> imageUrlList = new ArrayList<>();
+        imageUrlList.add("https://cdn.cellphones.com.vn/media/ltsoft/promotioncategory/Banner-chung-595x100.png");
+        imageUrlList.add("https://cdn.cellphones.com.vn/media/ltsoft/promotioncategory/595x100iPhone-12-v2.png");
+        imageUrlList.add("https://cdn.cellphones.com.vn/media/ltsoft/promotioncategory/oppo_normal_sale_24.08.2020.png");
+        imageUrlList.add("https://cdn.cellphones.com.vn/media/ltsoft/promotioncategory/Cate_595x100_2.png");
+        imageUrlList.add("https://cdn.cellphones.com.vn/media/ltsoft/promotioncategory/normal_sale_nokia_24.08.2020.png");
+
+        ImageView imageView;
+        for (int i = 0; i < imageUrlList.size(); i++) {
+            imageView = new ImageView(this);
+            Picasso.get().load(imageUrlList.get(i)).into(imageView);
+            imageView.setScaleType(ImageView.ScaleType.FIT_XY);
+            viewFlipper.addView(imageView);
+            viewFlipper.setFlipInterval(3000);
+            viewFlipper.setAutoStart(true);
+        }
+        Animation animationIn = AnimationUtils.loadAnimation(this, R.anim.anim_flipper_in);
+        Animation animationOut =AnimationUtils.loadAnimation(this, R.anim.anim_filpper_out);
+        viewFlipper.setInAnimation(animationIn);
+        viewFlipper.setInAnimation(animationOut);
+    }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        return super.onOptionsItemSelected(item);
     }
 }
