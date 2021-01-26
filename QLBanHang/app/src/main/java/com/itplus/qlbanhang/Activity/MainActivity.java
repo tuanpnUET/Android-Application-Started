@@ -150,7 +150,6 @@ public class MainActivity extends AppCompatActivity {
         lvNavigation = findViewById(R.id.lvNavigation);
     }
     private void init(){
-
         initActionBar();
         initViewFlipper();
     }

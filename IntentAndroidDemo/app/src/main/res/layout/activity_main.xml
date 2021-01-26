@@ -44,6 +44,5 @@
         android:id="@+id/imgNoPreview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:src="@drawable/imgNoPreview"></ImageView>
+        android:layout_gravity="center"></ImageView>
 </LinearLayout>
